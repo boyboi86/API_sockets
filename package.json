@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/boyboi86/API_sockets/issues"
   },
-  "homepage": "https://github.com/boyboi86/API_sockets#readme"
+  "homepage": "https://github.com/boyboi86/API_sockets#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.0"
+  }
 }
