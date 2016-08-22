@@ -1,0 +1,29 @@
+html, body {
+    height:100%;
+     
+    background: -webkit-linear-gradient(rgba(255,255,255,0.4)0%,rgba(83,83,83,0.5) 50%, rgba(0,0,0,1) 100%), url("https://source.unsplash.com/random") no-repeat center center fixed;
+    background: -moz-linear-gradient(rgba(255,255,255,0.4)0%,rgba(83,83,83,0.5) 50%, rgba(0,0,0,1) 100%), url("https://source.unsplash.com/random") no-repeat center center fixed;
+    background: -o-linear-gradient(rgba(255,255,255,0.4)0%,rgba(83,83,83,0.5) 50%, rgba(0,0,0,1) 100%), url("https://source.unsplash.com/random") no-repeat center center fixed;
+    background: linear-gradient(rgba(255,255,255,0.4)0%,rgba(83,83,83,0.5) 50%, rgba(0,0,0,1) 100%), url("https://source.unsplash.com/random") no-repeat center center fixed;
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;   
+}
+
+.vertical-center {
+	min-height: 100vh;
+	margin: 0;
+	display: flex;
+	align-items: center;
+}
+
+.chatLog {
+	 background: -webkit-linear-gradient(rgba(255,255,255,0.4)0%;
+    background: -moz-linear-gradient(rgba(255,255,255,0.4)0%;
+    background: -o-linear-gradient(rgba(255,255,255,0.4)0%;
+    background: linear-gradient(rgba(255,255,255,0.4)0%;
+
+    border: 1px solid black;
+}
