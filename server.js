@@ -11,6 +11,31 @@ app.use(express.static(__dirname + '/public'));
 
 //memory cache
 var clientInfo = {};
+
+// Sends current users to provided socket
+function sendCurrentUsers (socket) {
+	var info = clientInfo[socket.id];
+	var users = [];
+
+	if(typeof info === 'undefined') {
+		return;
+	}
+
+	Object.keys(clientInfo).forEach(function (socketId){
+		var userInfo = clientInfo[socketId];
+
+		if(info.room === userInfo.room) {
+			users.push(userInfo.name);
+		}
+	});
+
+	socket.emit('message', {
+		name: 'System',
+		text: 'Current users in chatroom: ' + users.join(', '),
+		timestamp: moment().valueOf()
+	})
+}
+
 //event on 'connection'
 io.on('connection', function(socket){
 	console.log('user connected')
@@ -38,15 +63,18 @@ io.on('connection', function(socket){
 			timestamp: moment().valueOf()
 		})
 	});
-//io.to is specific
+//io.to is specific to everyone that is in room
 	socket.on('message', function (message){
 		console.log('Message received: ' + message.text);
-		//send to everyone excluding sender
-		//socket.broadcast.emit('message', message);
-		message.timestamp = moment().valueOf();
-		io.to(clientInfo[socket.id].room).emit('message', message);
+		if(message.text === '@currentUsers') {
+			sendCurrentUsers(socket);
+		} else {
+			//send to everyone excluding sender: socket.broadcast.emit('message', message);
+			message.timestamp = moment().valueOf();
+			io.to(clientInfo[socket.id].room).emit('message', message);
+		}
 	});
-//socket.emit is for everyone
+//socket.emit is for everyone within chat
 	socket.emit('message', {
 		name: 'System login on',
 		text: 'Welcome to chat application!',
