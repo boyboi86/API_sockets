@@ -16,6 +16,6 @@ Open desired browser or chrome go to `http://localhost:3000`
 
 Enter username and Chatroom to enter chat. Only those within the same chatroom can chat.
 
-type `@userName` to see the list of users (username only) in chatroom.
+type `@currentUser` to see the list of users (username only) in chatroom.
 
 You can open multiple browser and navigate to working URL to chat with yourself. (For testing purpose)
