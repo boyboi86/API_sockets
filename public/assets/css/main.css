@@ -20,12 +20,27 @@ html, body {
 }
 
 .chatLog {
-	padding-top: 2px;
-	padding-bottom: 2px;
-	border-radius: 20px;
-
 	background-color: -webkit-rgba(255,255,255,0.5);
     background-color: -moz-rgba(255,255,255,0.5);
     background-color: -o-rgba(255,255,255,0.5);
     background-color: rgba(255,255,255,0.5);
+}
+
+.chat {
+    margin-top: 10px;
+}
+
+.Login {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 20px;
+}
+
+.messages p {
+    margin: 5px 0;
+}
+
+.aLink {
+    font-size: 20px;
+    font-weight: bold;
 }
