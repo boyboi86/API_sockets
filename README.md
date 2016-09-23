@@ -12,7 +12,7 @@ run `npm start` to initialize app, go to browser http://localhost:3000
 
 ## Note
 
-you can also see a running app on heroku, [Heroku app]("https://lit-anchorage-31694.herokuapp.com/index.html")
+you can also see a running app on heroku, [Heroku app](https://lit-anchorage-31694.herokuapp.com/index.html)
 
 ## Instruction for usage
 
