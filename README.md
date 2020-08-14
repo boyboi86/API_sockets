@@ -2,6 +2,8 @@
 
 Basic Chat application using socket.io/ ExpressJS/ NodeJS
 
+This is a **real-time chat application**. The application is also deployed on Heroku, kindly click the link provided.
+
 ## Instructions
 
 download zip file or run `git clone` repo
